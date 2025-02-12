@@ -14,8 +14,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "ALUMNADO", schema = "SALESIANAS")
-public class Alumnado {
+@Table(name = "ALUMNO", schema = "SALESIANAS")
+public class Alumno {
 	
 	@Id
 	@Column(name = "N_MATRICULA")
