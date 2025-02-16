@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "ALUMNO", schema = "SALESIANAS")
-public class Alumno {
+public class AlumnoEntity {
 	
 	@Id
 	@Column(name = "N_MATRICULA")
