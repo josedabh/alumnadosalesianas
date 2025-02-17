@@ -8,6 +8,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Class ControlEscritoDTO.
+ */
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,11 +18,15 @@ import lombok.Setter;
 @Builder
 public class ControlEscritoDTO {
 	
+    /** The numero control. */
     private int numeroControl;
     
+    /** The numero preguntas. */
     private int numeroPreguntas;
     
+    /** The fecha realizacion. */
     private Date fechaRealizacion;
     
+    /** The alumno id. */
     private int alumno_id;
 }
