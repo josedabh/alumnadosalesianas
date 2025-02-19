@@ -11,4 +11,10 @@ public class ProfesorMapper {
 	public static ProfesorDTO mapToEntityResponse(ProfesorEntity entity) {
 		return new ProfesorDTO(entity.getNombre());
 	}
+	
+	public static ProfesorEntity mapToDTOEntity(ProfesorDTO profesor) {
+		ProfesorEntity entity = new ProfesorEntity();
+		entity.setNombre(profesor.getNombre());
+		return entity;
+	}
 }

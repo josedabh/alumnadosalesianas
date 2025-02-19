@@ -12,10 +12,18 @@ public class AlumnoMapper {
 		return new AlumnoDTO(alumno.getNombre(), alumno.getGrupo());
 	}
 	
-	public static AlumnoEntity maptoDTOEntity(AlumnoDTO alumnoDTO) {
+	public static AlumnoEntity mapToDTOEntity(AlumnoDTO alumnoDTO) {
 		AlumnoEntity entity = new AlumnoEntity();
 		entity.setNombre(alumnoDTO.getNombre());
 		entity.setGrupo(alumnoDTO.getGrupo());
+		return entity;
+	}
+	
+	public static AlumnoEntity updateToEntity(long id,AlumnoDTO alumnoDTO) {
+		AlumnoEntity entity = new AlumnoEntity();
+		entity.setNMatricula(id);
+		entity.setGrupo(alumnoDTO.getGrupo());
+		entity.setNombre(alumnoDTO.getNombre());
 		return entity;
 	}
 

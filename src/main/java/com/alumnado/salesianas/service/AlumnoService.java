@@ -29,7 +29,7 @@ public class AlumnoService {
 	 * @return the alumno DTO
 	 */
 	public AlumnoDTO introducirAlumno(AlumnoDTO alumno) {
-		AlumnoEntity entity = AlumnoMapper.maptoDTOEntity(alumno);
+		AlumnoEntity entity = AlumnoMapper.mapToDTOEntity(alumno);
 //		if(alumnoRepository.findAll().stream()
 //			.filter(alum -> alumno.equals(
 //					AlumnoMapper.mapToEntityResponse(alum))) == null) {
@@ -52,5 +52,15 @@ public class AlumnoService {
 				.collect(Collectors.toList());
 	}
 	
+	public AlumnoDTO updateAlumno(long idAlumno, AlumnoDTO alumno) {
+		boolean existe = alumnoRepository.findById(idAlumno).isPresent();
+		if(existe) {
+			AlumnoEntity entity = AlumnoMapper.updateToEntity(idAlumno, alumno);
+			alumnoRepository.save(entity);
+			return alumno;
+		} else {
+			throw new NullPointerException("No existe alumno con ese Numero matriula");
+		}
+	}
 
 }
