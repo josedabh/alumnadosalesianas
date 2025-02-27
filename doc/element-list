@@ -1,0 +1,8 @@
+com.alumnado.salesianas
+com.alumnado.salesianas.bean
+com.alumnado.salesianas.config
+com.alumnado.salesianas.controller
+com.alumnado.salesianas.entity
+com.alumnado.salesianas.mapper
+com.alumnado.salesianas.repository
+com.alumnado.salesianas.service

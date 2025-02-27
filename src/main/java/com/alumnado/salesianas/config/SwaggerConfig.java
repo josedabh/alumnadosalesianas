@@ -10,9 +10,17 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
+/**
+ * The Class SwaggerConfig.
+ */
 @Configuration
 public class SwaggerConfig {
 
+    /**
+     * Custom open API.
+     *
+     * @return the open API
+     */
     @Bean
     OpenAPI customOpenAPI() {
         return new OpenAPI()
