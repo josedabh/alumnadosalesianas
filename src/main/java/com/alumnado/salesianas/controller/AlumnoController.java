@@ -37,7 +37,7 @@ public class AlumnoController {
 	 * @param alumnoDTO the alumno DTO
 	 * @return the response entity
 	 */
-	@PostMapping
+	@PostMapping("/crear")
 	public ResponseEntity<AlumnoDTO> createAlumno(@RequestBody AlumnoDTO alumnoDTO) {
 		return ResponseEntity.ok(alumnoService.introducirAlumno(alumnoDTO));
 	}
@@ -47,7 +47,7 @@ public class AlumnoController {
 	 *
 	 * @return the response entity
 	 */
-	@GetMapping
+	@GetMapping("/listar")
 	public ResponseEntity<List<AlumnoDTO>> listarAlumnos() {
 		return ResponseEntity.ok(alumnoService.listaAlumnos());
 	}

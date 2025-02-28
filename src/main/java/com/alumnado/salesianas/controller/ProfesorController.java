@@ -32,7 +32,7 @@ public class ProfesorController {
 	 * @param profesor the profesor
 	 * @return the response entity
 	 */
-	@PostMapping
+	@PostMapping("/crear")
 	public ResponseEntity<ProfesorDTO> crearProfesor(@RequestBody ProfesorDTO profesor){
 		return ResponseEntity.ok(profesorService.introducirAlumno(profesor));
 	}
@@ -44,6 +44,7 @@ public class ProfesorController {
 	 * @param practicaId the practica id
 	 * @return the response entity
 	 */
+	@PostMapping("/{profesorId}/practica/{practicaId}")
 	public ResponseEntity<Void> asociarPractica(@PathVariable Long profesorId,
          @PathVariable Long practicaId) {
     profesorService.asociarPractica(profesorId, practicaId);
@@ -55,7 +56,7 @@ public class ProfesorController {
 	 *
 	 * @return the response entity
 	 */
-	@GetMapping
+	@GetMapping("/leer")
 	public ResponseEntity<List<ProfesorDTO>> leerTodos() {
 		return ResponseEntity.ok(profesorService.listarProfesores());
 	}
